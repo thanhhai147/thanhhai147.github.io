@@ -1,11 +1,11 @@
 document.getElementById("btn_plan").addEventListener("click", () => {
-    window.location.assign("https://thanhhai147.github.io/Schedule/app_Schedule.html");
+    window.location.assign("./Schedule/app_Schedule.html");
 })
 document.getElementById("btn_prac").addEventListener("click", () => {
-    window.location.assign("https://thanhhai147.github.io/Exercise/app_Exercise.html");
+    window.location.assign("./Exercise/app_Exercise.html");
 })
 document.getElementById("btn_news").addEventListener("click", () =>{
-    window.location.assign("https://thanhhai147.github.io/News/app_News.html");
+    window.location.assign("./News/app_News.html");
 })
 
 
