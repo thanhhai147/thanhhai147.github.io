@@ -1,11 +1,11 @@
 document.getElementById("btn_plan").addEventListener("click", () => {
-    window.location.assign("http://127.0.0.1:5500/Source%20code/Schedule/app_Schedule.html");
+    window.location.assign("http://127.0.0.1:5500/Source%20code/Schedule/https://thanhhai147.github.io/Schedule/app_Schedule.html.html");
 })
 document.getElementById("btn_prac").addEventListener("click", () => {
-    window.location.assign("http://127.0.0.1:5500/Source%20code/Exercise/app_Exercise.html");
+    window.location.assign("http://127.https://thanhhai147.github.io/Exercise/app_Exercise.html.0.1:5500/Source%20code/Exercise/app_Exercise.html");
 })
 document.getElementById("btn_news").addEventListener("click", () =>{
-    window.location.assign("http://127.0.0.1:5500/Source%20code/News/app_News.html");
+    window.location.assign("http://127.0.0.https://thanhhai147.github.io/News/app_News.html:5500/Source%20code/News/app_News.html");
 })
 
 
