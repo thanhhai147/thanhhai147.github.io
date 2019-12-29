@@ -1,5 +1,5 @@
 document.getElementById("btn_plan").addEventListener("click", () => {
-    window.location.assign("http://127.0.0.1:5500/Source%20code/Schedule/https://thanhhai147.github.io/Schedule/app_Schedule.html.html");
+    window.location.assign("https://thanhhai147.github.io/Schedule/app_Schedule.html");
 })
 document.getElementById("btn_prac").addEventListener("click", () => {
     window.location.assign("http://127.https://thanhhai147.github.io/Exercise/app_Exercise.html.0.1:5500/Source%20code/Exercise/app_Exercise.html");
