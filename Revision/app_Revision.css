@@ -1,0 +1,135 @@
+body{
+    margin:0;
+    padding: 0;
+}
+#container{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
+#select_bar{
+    width:100%;
+    height: 64px;
+    background-color: #5D8AA8;
+}
+#mediate{
+    margin-left: 30px;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.choice{
+    display:inline-block;
+    font-size: 26px;
+    color: white;
+    margin: auto;
+}
+.choice_1:hover{
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+#task_bar{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#mediate_2{
+    height: inherit;
+    width:800px;
+    background-color: #0BB5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav_item{
+    display:inline-block;
+    font-size: 26px;
+    color: white;
+    margin: 48px;
+}
+#title{
+    color: #5D8AA8;
+}
+#task_board{
+    border-radius: 20px;
+    background-color: #4876FF;
+}
+#father{
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+}
+#remaining_day{
+    display: flex; 
+    padding: 8px;
+}
+#subject{
+    display: flex;
+    padding: 8px;
+}
+.part{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    
+}
+.choice_part{
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom: 0px;
+    color:white;
+}
+#start{
+    font-size: 24px;
+    color:white;
+    background-color: #5D8AA8;
+    padding:4px;
+    width:200px;
+    border: 0px;
+    border-radius: 30px;
+    margin-bottom: 8px;
+}
+#start:hover{
+    background-color: #0BB5FF;
+}
+#content{
+    display: flex;
+    flex-flow: column;
+}
+.sub_board{
+    margin: 20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: #5D8AA8;
+    border-radius: 5px;
+}
+/* .sub_title_day{
+    margin:5px;
+    font-weight: bold;
+    color:white;
+    font-size: 20px;
+} */
+.sub_content{
+    margin: 5px;
+    color:white;
+    font-size: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.title{
+    margin:5px;
+    font-weight: bold;
+    color:white;
+    font-size: 20px;
+}
+
+
