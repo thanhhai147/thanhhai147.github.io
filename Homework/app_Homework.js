@@ -1,5 +1,10 @@
+var content = new Array;
+
+  
 document.getElementById("task_number").addEventListener("submit", (a) => {
     a.preventDefault();
+    var start = document.getElementById("start");
+    start.style.display = "block";
     var number = document.getElementById("data_number").value;
     var content = document.getElementById("content");
     var b = content.childElementCount;
@@ -46,10 +51,14 @@ function create(input){
 }
 
 function enter(input){
+    var str = input.id;
+    var id_str = str.substr(str.length-1,2);
     var a = prompt("Please, enter your sybject you want to do here:");
+    content.splice(id_str,0,a);
     var subject = document.createElement("div");
     subject.innerHTML = a;
     subject.className = "name_part";
+    subject.id = `content_${input.id}`
     input.appendChild(subject);
 }
 
@@ -61,101 +70,100 @@ function cal_time(){
     var t = 22*60-sum;
     return t;
 }
+
+var each_num;
 function time(input){ 
     var number = document.getElementById("data_number").value;
     var remain_num = cal_time()/number;
     console.log(remain_num)
     if (remain_num>=30){
             console.log("succeed")
-            var each_num = remain_num - 5;
+            each_num = remain_num - 5;
             var set_time = document.createElement("div");
             set_time.className = "time_part";
-            set_time.innerHTML = `${each_num.toFixed(1)} minutes`;
+            set_time.innerHTML = `${each_num.toFixed(0)} minutes`;
             input.appendChild(set_time);
             alert("After each exercise, you should take a 5-minute rest!");
         }
     if(remain_num<30){
         console.log("succeed")
-        var each_num = remain_num;
+        each_num = remain_num;
         var set_time = document.createElement("div");
         set_time.className = "time_part";
-        set_time.innerHTML = `${each_num.toFixed(1)} minutes`;
+        set_time.innerHTML = `${each_num.toFixed(0)} minutes`;
         input.appendChild(set_time);
         alert("You should hurry up!")
     }
     if(remain_num<25){
         console.log("succeed")
-        var each_num = remain_num;
+        each_num = remain_num;
         var set_time = document.createElement("div");
         set_time.className = "time_part";
-        set_time.innerHTML = `${each_num.toFixed(1)} minutes`;
+        set_time.innerHTML = `${each_num.toFixed(0)} minutes`;
         input.appendChild(set_time);
         alert("More effort! You don't have much time.")
     }
 }
 
-// document.getElementById("start").addEventListener("click", ()=>{
-//     var number = document.getElementById("data_number").value;
-//     var remain_num = cal_time()/number;
-//     if(remain_num>=30){
-//         var get =  document.getElementById("container");
-//         var countdown = document.createElement("div");
-//         countdown.className = "countdown";
-//         countdown.setAttribute("onclick", "countdown_5(this)");
-//         get.appendChild(countdown);
-//     }
-//     if(remain_num<30){
-//         var get =  document.getElementById("container");
-//         var countdown = document.createElement("div");
-//         countdown.className = "countdown";
-//         countdown.setAttribute("onclick", "countdown(this)");
-//         get.appendChild(countdown);
-//     }
-// })
-// function countdown_5(input){
-//     console.log("ok");
-//     var number = document.getElementById("data_number").value;
-//     var remain_num = cal_time()/number;
-//     var each_num = remain_num - 5;
-//     var d = new Date();
-//     var second = d.getSeconds();
-//     function start(){
-//         if(second === -1){
-//             each_num -= 1;
-//             s = 59;
-//         }
-//         if(each_num === -1){
-//             alert("Time out!");
-//         }
-//         var show = document.createElement("div");
-//         show.className = "show_part";
-//         show.innerHTML = `${each_num}:${second}`;
-//         input.appendChild(show);
-//     }
-//     start();
-// }
-// function countdown(input){
-//     console.log("ok");
-//     var number = document.getElementById("data_number").value;
-//     var remain_num = cal_time()/number;
-//     var each_num = remain_num;
-//     var d = new Date();
-//     var second = d.getSeconds();
-//     function start(){
-//         for(var i=0; each_num>=0; i++){
-//             if(second === 0){
-//                 each_num -= 1;
-//                 s = 59;
-//             }
-//             if(each_num === 0){
-//                 alert("Time out!");
-//             }
-//             var show = document.createElement("div");
-//             show.className = "show_part";
-//             show.innerHTML = `${each_num}:${second}`;
-//             input.appendChild(show);
-//         }
-//     }
-//     start();
-// }
+var index_num=0;
 
+function countdown(){
+    var got = document.getElementById("count_content");
+    got.innerHTML = content[index_num];
+    if(got.innerHTML=="undefined"){
+        alert("goodjob");
+    }
+    else{
+        var get = document.getElementById("count");
+    var mediate = each_num % 60;
+    var hour  = (each_num-mediate) / 60;
+    var second = 0;
+    get.innerHTML = `${hour}:${mediate}:${second}`;
+    setTimeout(function first(){
+        second = 59;
+        if(mediate>0){
+            mediate--;
+        }
+        if(mediate==0 && hour>0){
+            mediate = 59;
+            hour--;
+        }
+        get.innerHTML = `${hour}:${mediate}:${second}`;
+    },1000);
+    setInterval(function count(){
+        if(second>0){
+            second--;
+            get.innerHTML = `${hour}:${mediate}:${second}`;
+        }
+        if(second==0 && mediate>0){
+            second = 59;
+            mediate--;
+            get.innerHTML = `${hour}:${mediate}:${second}`;
+        }
+        if(second==0 && mediate==0){
+            second = 59;
+            mediate = 59;
+            hour--;
+            get.innerHTML = `${hour}:${mediate}:${second}`;
+        }
+        if(second==0 && mediate==0 && hour==0){
+            clearInterval();
+            alert('Time out!');
+        }
+    },1000);
+    }
+}
+
+
+
+function confirm(input){
+    var board = document.getElementById("count_board");
+    board.style.display = "block";
+    countdown();
+    var change = document.getElementById("finish");
+    change.style.display = "block";
+    change.addEventListener("click",() => {
+        index_num++;
+        countdown();
+    });
+}

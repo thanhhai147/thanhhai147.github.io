@@ -94,79 +94,54 @@ document.getElementById("form").addEventListener("submit", (x) => {
                 }
             }
         if(number_subject>number_day){
-            if(mediate_num==0){
-                for(var i=0; i<number_day; i++){
-                    var index = document.createElement("div");
-                    index.className = "sub_board";
-                    index.id = `sub_board_${i}`;
-                    put.appendChild(index);
-                        
-    
-                    var get = document.getElementById(index.id);
-                    for(var j=0; j<2; j++){
-                        if(j==0){
-                            var title = document.createElement("div");
-                            title.className = "title";
-                            title.id = `title_${i}`;
-                            title.innerHTML = `The subject of ${a[i]["time"]}:`;
-                            get.appendChild(title);
-                        }
-                        else{
-                            var sub_content = document.createElement("div");
-                            sub_content.className = "sub_content";
-                            sub_content.id = `sub_content_${i}`;
-                            get.appendChild(sub_content);
-                        }
+            for(var i=0; i<number_day; i++){
+                var index = document.createElement("div");
+                index.className = "sub_board";
+                index.id = `sub_board_${i}`;
+                put.appendChild(index);
+                            
+        
+                var get = document.getElementById(index.id);
+                for(var j=0; j<2; j++){
+                    if(j==0){
+                        var title = document.createElement("div");
+                        title.className = "title";
+                        title.id = `title_${i}`;
+                        title.innerHTML = `The subject of ${a[i]["time"]}:`;
+                        get.appendChild(title);
                     }
-    
+                    else{
+                        var sub_content = document.createElement("div");
+                        sub_content.className = "sub_content";
+                        sub_content.id = `sub_content_${i}`;
+                        get.appendChild(sub_content);
+                    }
+                }
+        
 
-                    var post = document.getElementById(`sub_content_${i}`);
-                    for(var k=0; k<each_day; k++){
-                        var create = document.createElement("div");
-                        create.className = "subject";
-                        create.id = `subject_${i}_${k}`;
-                        create.setAttribute("onclick","enter(this)");
-                        create.innerHTML = "Subject:";
-                        post.appendChild(create);
-                    }
+                var post = document.getElementById(`sub_content_${i}`);
+                for(var k=0; k<each_day; k++){
+                    var create = document.createElement("div");
+                    create.className = "subject";
+                    create.id = `subject_${i}_${k}`;
+                    create.setAttribute("onclick","enter(this)");
+                    create.innerHTML = "Subject:";
+                    post.appendChild(create);
                 }
             }
             if(mediate_num!=0){
-                for(var i=0; i<number_day; i++){
-                    var index = document.createElement("div");
-                    index.className = "sub_board";
-                    index.id = `sub_board_${i}`;
-                    put.appendChild(index);
-
-                    var get = document.getElementById(index.id);
-                    for(var j=0; j<2; j++){
-                        if(j==0){
-                            var title = document.createElement("div");
-                            title.className = "title";
-                            title.id = `title_${i}`;
-                            title.innerHTML = `The subject of ${a[i]["time"]}:`;
-                            get.appendChild(title);
-                        }
-                        else{
-                            var sub_content = document.createElement("div");
-                            sub_content.className = "sub_content";
-                            sub_content.id = `sub_content_${i}`;
-                            get.appendChild(sub_content);
-                        }
+                var t=0;
+                for(var l=0; l<number_day; l++){
+                    if(t==mediate_num){
+                        break;
                     }
-                }
-                
-                
-                for(var j=0; j<number_subject; j++){
-                    for(var i=0; i<number_day; i++){
-                        var post = document.getElementById(`sub_content_${i}`);
-                        var create = document.createElement("div");
-                        create.className = "subject";
-                        create.id = `subject_${i}`;
-                        create.innerHTML = "Subject:"
-                        post.appendChild(create);                         
-                    }
-                        
+                    var add = document.getElementById(`sub_content_${l}`);
+                    var create = document.createElement("div");
+                    create.className = "subject";
+                    create.setAttribute("onclick","enter(this)");
+                    create.innerHTML = "Subject:";
+                    add.appendChild(create);
+                    t++;
                 }
             }
         }

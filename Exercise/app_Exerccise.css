@@ -9,12 +9,12 @@ body{
 #select_bar{
     width:100%;
     height: 64px;
-    background-color: #5D8AA8;
+    background-color:#f6f6f6;
 }
 .nav_item{
     display:inline-block;
     font-size: 26px;
-    color: white;
+    color: #2b2b2b; 
     margin: 48px;
 }
 #mediate{
@@ -28,23 +28,30 @@ body{
 .choice{
     display:inline-block;
     font-size: 24px;
-    color: white;
+    color: #2b2b2b;
     margin: auto;
 }
 #title{
-    text-align: center;
-    color: #5D8AA8;
-    text-decoration: underline;
+    background-image: linear-gradient(to right top,#4876FF, #0BB5FF, #f6f6f6, #ffffff);
+    height: 200px;
+    position: relative;
+}
+h1{
+    position: absolute;
+    color: #2b2b2b;
+    font-size: 40px;
+    left: 60px;
+    top: 20px;
 }
 a{
-    color: white;
+    color: #2b2b2b;
     text-decoration: none;
 }
 #search{
     height: 35px;
-    width: 20%;
+    width: 90%;
     font-size: 18px;
-    border: 2px solid #5D8AA8;
+    border: 2px solid #0BB5FF;
     margin: 20px;
     background-color: #f6f6f6;
 }
@@ -56,7 +63,7 @@ a{
     justify-content: center;
     align-items: center;
     margin:20px;    
-    background-color: #5D8AA8;
+    background-image: linear-gradient(to right, #0BB5FF, #4876FF);
     padding: 8px;
 }
 #exercise{
@@ -64,9 +71,9 @@ a{
     flex-flow: column;
 }
 .part{
-    height: 48px;
+    height: 60px;
     width: 80%;
-    background-color: #f6f6f6;
+    background-image: linear-gradient(to right, #0BB5FF, #4876FF);
     color: black;
     display: block;
     margin-left:auto;
@@ -81,5 +88,46 @@ a{
     margin-left: 20px;
     font-size: 24px;
 }
-
+#schedule{
+    position: relative;
+}
+#drop_menu{
+    position: absolute;
+    top: 50px;
+    display: none;
+    z-index: 1;
+}
+#drop_content{
+    position: relative;
+    background-color: #f6f6f6;
+    width: 160px;
+    height:130px;
+}
+#Schedule:hover  #drop_menu{
+    display: block;
+}
+#Schedule:hover{
+    background-color: #CCCCCC;
+}
+.color_change:hover{
+    background-color: #CCCCCC;
+}
+#drop_content_schedule{
+    position: absolute;
+    top:10px;
+    left: 30px;
+    background-color: #f6f6f6;
+}
+#drop_content_homework{
+    position: absolute;
+    top:50px;
+    left:30px;
+    background-color: #f6f6f6;
+}
+#drop_content_revision{
+    position: absolute;
+    top:90px;
+    left: 30px;
+    background-color: #f6f6f6;
+}
 

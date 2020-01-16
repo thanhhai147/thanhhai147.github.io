@@ -16,38 +16,40 @@
                 <div id="icon" class="nav_item"><a href="../index.html"><img
                             src="../Assets/pencil-icon-design-vector-png_87434.png" width="30px" height="30px"></a>
                 </div>
-                <div id="Schedule" class="nav_item"><a href="../Schedule/app_Schedule.html">Schedule</a></div>
+                <div id="Schedule" class="nav_item">
+                    <a href="../Schedule/app_Schedule.html">Schedule</a>
+                    <div id="drop_menu">
+                        <div id="drop_content">
+                            <a id="drop_content_schedule" class="color_change" href="../Schedule/app_Schedule.html">Schedule</a>
+                            <a id="drop_content_homework" class="color_change" href="../Homework/app_Homework.html">Homework</a>
+                            <a id="drop_content_revision" class="color_change" href="../Revision/app_Revision.html">Revision</a>
+                        </div>
+                    </div>     
+                </div>
                 <div id="Exercise" class="nav_item"><a href="../Exercise/app_Exercise.html">Exercise</a></div>
                 <div id="News" class="nav_item"><a href="../News/app_News.html">News</a></div>
                 <div id="Support" class="nav_item"><a href="../Support/app_Support.html">Support</a></div>
             </div>
-        </nav>>
-
-        <div id="task_bar">
-            <div id="mediate_2">
-                <div id="Schedule_task" class=" choice_1 choice"><a href="../Schedule/app_Schedule.html">Schedule</a>
-                </div>
-                <div id="Homework_task" class=" choice_1 choice"><a href="../Homework/app_Homework.html">Homework</a>
-                </div>
-                <div id="Revision_task" class=" choice_1 choice"><a href="../Revision/app_Revision.html">Revision</a>
-                </div>
-            </div>
-        </div>
+        </nav>
         <div id="title">
             <h1>Homework</h1>
         </div>
         <div id="task_board">
-            <div id="day_title"></div>
             <form id="task_number">
                 <div id="number_title">
                     <h2>Number of exercises:</h2>
                 </div>
-                <div id="number_content"><input id="data_number" type="number"></div>
+                <input id="data_number" type="number" required>
                 <input class="submit" type="submit" value="submit">
             </form>
-            <div id="content"></div>
         </div>
-        <!-- <div id="start">Start</div> -->
+        <div id="content"></div>
+        <div id="start" onclick="confirm(this)">Start</div>
+        <div id="count_board">
+            <div id="count_content"></div>
+            <div id="count"></div>
+            <div id="finish">Finish</div>
+        </div>
     </div>
     <script src="app_Homework.js"></script>
 </body>

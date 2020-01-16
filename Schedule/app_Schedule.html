@@ -12,28 +12,30 @@
         <nav id="select_bar">
             <div id="mediate">
                 <div id="icon" class="nav_item"><a href="../index.html"><img src="../Assets/pencil-icon-design-vector-png_87434.png" width="30px" height="30px"></a></div>
-                <div id="Schedule" class="nav_item"><a href="../Schedule/app_Schedule.html">Schedule</a></div>
+                <div id="Schedule" class="nav_item">
+                    <a href="../Schedule/app_Schedule.html">Schedule</a>
+                    <div id="drop_menu">
+                        <div id="drop_content">
+                            <a id="drop_content_schedule" class="color_change" href="../Schedule/app_Schedule.html">Schedule</a>
+                            <a id="drop_content_homework" class="color_change" href="../Homework/app_Homework.html">Homework</a>
+                            <a id="drop_content_revision" class="color_change" href="../Revision/app_Revision.html">Revision</a>
+                        </div>
+                    </div>     
+                </div>
                 <div id="Exercise" class="nav_item"><a href="../Exercise/app_Exercise.html">Exercise</a></div>
                 <div id="News" class="nav_item"><a href="../News/app_News.html">News</a></div>
                 <div id="Support" class="nav_item"><a href="../Support/app_Support.html">Support</a></div> 
             </div>              
         </nav>
-        <div id="task_bar">
-            <div id="mediate_2">
-                <div id="Schedule_task" class="choice_1 choice"><a href="../Schedule/app_Schedule.html">Schedule</a></div>
-                <div id="Homework_task" class="choice_1 choice"><a href="../Homework/app_Homework.html">Homework</a></div>
-                <div id="Revision_task" class="choice_1 choice"><a href="../Revision/app_Revision.html">Revision</a></div>
-            </div>
-        </div>
-        <div id="title"><h1>Schedule</h1></div>
+        <div id="title"><h1 id="main_title">Schedule</h1></div>
         <div id="days_bar">
-            <div class="days"><a href="#day_0">Monday</a></div>            
-            <div class="days"><a href="#day_1">Tuesday</a></div>
-            <div class="days"><a href="#day_2">Wednesday</a></div>
-            <div class="days"><a href="#day_3">Thursday</a></div>
-            <div class="days"><a href="#day_4">Friday</a></div>
-            <div class="days"><a href="#day_5">Saturday</a></div>
-            <div class="days"><a href="#day_6">Sunday</a></div>
+            <div class="days" onclick="display(this)" id="0"><a href="#day_0">Monday</a></div>            
+            <div class="days" onclick="display(this)" id="1"><a href="#day_1">Tuesday</a></div>
+            <div class="days" onclick="display(this)" id="2"><a href="#day_2">Wednesday</a></div>
+            <div class="days" onclick="display(this)" id="3"><a href="#day_3">Thursday</a></div>
+            <div class="days" onclick="display(this)" id="4"><a href="#day_4">Friday</a></div>
+            <div class="days" onclick="display(this)" id="5"><a href="#day_5">Saturday</a></div>
+            <div class="days" onclick="display(this)" id="6"><a href="#day_6">Sunday</a></div>
         </div>
         <div id="content"></div>
     </div>

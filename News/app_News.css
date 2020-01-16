@@ -9,7 +9,7 @@ body{
 #select_bar{
     width:100%;
     height: 64px;
-    background-color: #5D8AA8;
+    background-color: #f6f6f6;
 }
 #mediate{
     margin-left: 30px;
@@ -23,19 +23,26 @@ body{
 .nav_item{
     display:inline-block;
     font-size: 26px;
-    color: white;
+    color: #2b2b2b;
     margin: 48px;
 }
-.choice{
+/* .choice{
     display:inline-block;
     font-size: 24px;
     color: white;
     margin: auto;
-}
+} */
 #title{
-    text-align: center;
-    color: #5D8AA8;
-    text-decoration: underline;
+    background-image: linear-gradient(to right top,#4876FF, #0BB5FF, #f6f6f6, #ffffff);
+    height: 200px;
+    position: relative;
+}
+h1{
+    position: absolute;
+    color: #2b2b2b;
+    font-size: 40px;
+    left: 60px;
+    top: 20px;
 }
 #news{
     display: flex;
@@ -53,6 +60,7 @@ body{
 #hot_news{
     height:500px;
     background-color: #f6f6f6;
+    margin-top: 40px;
     margin-bottom: 24px;
     margin-left: 60px;
     margin-right: 60px;
@@ -61,7 +69,7 @@ body{
 }
 .news_title{
     font-size: 24px;
-    color: #5D8AA8;
+    color: #2b2b2b;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -70,7 +78,7 @@ body{
     height: 150px;
 }
 a{
-    color: #5D8AA8;
+    color: #2b2b2b;
     text-decoration: none;
 }
 .content{
@@ -106,7 +114,45 @@ a{
     margin-left:20px;
     margin-right: 20px;
 }
-.a{
-    color: white;
-    text-decoration: none;
+#schedule{
+    position: relative;
+}
+#drop_menu{
+    position: absolute;
+    top: 50px;
+    display: none;
+    z-index: 1;
+}
+#drop_content{
+    position: relative;
+    background-color: #f6f6f6;
+    width: 160px;
+    height:130px;
+}
+#Schedule:hover  #drop_menu{
+    display: block;
+}
+#Schedule:hover{
+    background-color: #CCCCCC;
+}
+.color_change:hover{
+    background-color: #CCCCCC;
+}
+#drop_content_schedule{
+    position: absolute;
+    top:10px;
+    left: 30px;
+    background-color: #f6f6f6;
+}
+#drop_content_homework{
+    position: absolute;
+    top:50px;
+    left:30px;
+    background-color: #f6f6f6;
+}
+#drop_content_revision{
+    position: absolute;
+    top:90px;
+    left: 30px;
+    background-color: #f6f6f6;
 }

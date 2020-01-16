@@ -7,65 +7,68 @@
     <link rel="stylesheet" href="./app_Homepage.css">
     <title>Document</title>
 </head>
-<body onload="changeImg(this)">
+<body>
     <div id="container">
         <nav id="select_bar">
             <div id="mediate">
-                <div id="icon" class="nav_item"><a href="#"><img src="../Assets/pencil-icon-design-vector-png_87434.png" width="30px" height="30px"></a></div>
-                <div id="Schedule" class="nav_item"><a href="./Schedule/app_Schedule.html">Schedule</a></div>
+                <div id="icon" class="nav_item"><a href="./index.html"><img src="../Assets/pencil-icon-design-vector-png_87434.png" width="30px" height="30px"></a></div>
+                <div id="Schedule" class="nav_item">
+                    <a href="./Schedule/app_Schedule.html">Schedule</a>
+                    <div id="drop_menu">
+                        <div id="drop_content">
+                            <a id="drop_content_schedule" class="color_change" href="./Schedule/app_Schedule.html">Schedule</a>
+                            <a id="drop_content_homework" class="color_change" href="./Homework/app_Homework.html">Homework</a>
+                            <a id="drop_content_revision" class="color_change" href="./Revision/app_Revision.html">Revision</a>
+                        </div>
+                    </div>        
+                </div>
                 <div id="Exercise" class="nav_item"><a href="./Exercise/app_Exercise.html">Exercise</a></div>
                 <div id="News" class="nav_item"><a href="./News/app_News.html">News</a></div>
                 <div id="Support" class="nav_item"><a href="./Support/app_Support.html">Support</a></div> 
-            </div>              
+            </div>      
         </nav>
         <div id="introduce">
-            <div class="intro_part" id="intro">
-                <div class="title">
-                    <div class="title_part">Smart Study</div>
-                    <div class="content_part">We can make changes in your life</div>
+            <div class="intro" id="header">
+                <div class="part fade" id="index_1">
+                    <img class="img" id="image_1" src="./Assets/study_1.jpg" width="850px" height="500px">
+                    <div class="text" id="text_1"><h1>Smart<br>Study</h1></div>
                 </div>
-                <div class="img"><img id="img_study" src="../Assets/study_1.jpg"></div>
-            </div>
-            <div class="intro_part" id="plan">
-                <div class="image"><img id="img_plan" src="../Assets/img_plan.png"></div>
-                <div class="title">
-                    <div class="title_part">Start Planning</div>
-                    <div class="content_part">Sign in to do more tasks in less time</div>
-                    <div class="button" id="btn_plan">Get Started</div>
+                <div class="part fade" id="index_2">
+                    <div id="title">Smart Study</div>
+                    <div class="text" id="text_2">We can <br> make changes <br> in your life</div>
                 </div>
             </div>
-            <div class="intro_part" id="practice">
-                <div class="title">
-                    <div class="title_part">More Practicing</div>
-                    <div class="content_part">Effort and Patience are keys to success</div>
-                    <div class="button" id="btn_prac">Let's go</div>
-                </div>
-                <div class="image"><img id="img_prac" src="../Assets/practice-1.png"></div>
-            </div>
-            <div class="intro_part" id="inform">
-                <div class="image"><img id="img_news" src="../Assets/test.jpg"></div>
-                <div class="title">
-                    <div class="title_part">Latest News</div>
-                    <div class="content_part">Knowledge is one of the most important things</div>
-                    <div class="button" id="btn_news">Let's explore</div>
-                </div>
-            </div>
-            <div class="intro_part" id="instruction">
-                <div id="title_instruct">See how it works</div>
-                <div id="describe_instruct">It's very simple and plain to finish your work more efficient</div>
-                <div id="img_instruct">
-                    <img id="img_part_instruct" height="400px" width="800px" src="../Assets/img_1.png">
-                    <img onclick="nextImg(this)" id="sign" height="50px" width="50px" src="../Assets/arrow, next png icon.png">
+            <div class="intro line"></div>
+            <div class="intro" id="fearture">
+                <div class="title">Feartures</div>
+                <div id="content">
+                    <div class="cont_part" id="schedule">
+                        <div class="title_part">Schedule</div>
+                        <img class="icon" src="./Assets/plan.png">
+                    </div>
+                    <div class="cont_part" id="exercise">
+                        <div class="title_part">Exercise</div>
+                        <img class="icon" src="./Assets/code_2.html.png">
+                    </div>
+                    <div class="cont_part" id="news">
+                        <div class="title_part">News</div>
+                        <img class="icon" src="./Assets/preview13.png">
+                    </div>
                 </div>
             </div>
-            <div class="intro_part" id="contact">
-                <div id="title_contact">Contact us</div>
-                <div id="box">
-                    <div class="content_1">P.T.Hai</div>
-                    <div class="content_2">Mind X</div>
-                </div>
+            <div class="intro line add"></div>
+            <div class="title">See how it works</div>
+            <div class="intro" id="instruct">
+                <img id="img_part_instruct" src="./Assets/img_1.png" width="700px" height="350px">
+                <img id="arrow" src="./Assets/arrow, next png icon.png" onclick="nextImg(this)" width="80px" height="80px">
             </div>
-        </div> 
+            <div class="intro line add"></div>
+            <div class="title extra">Contact Us</div>
+            <div class="intro" id="contact">
+                Phan Thanh Hai <br>
+                MindX 
+            </div>
+        </div>
     </div>
     <script src="./app_Homepage.js"></script>
 </body>

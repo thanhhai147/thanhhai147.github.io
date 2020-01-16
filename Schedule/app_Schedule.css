@@ -12,7 +12,7 @@ html{
 #select_bar{
     width:100%;
     height: 64px;
-    background-color: #5D8AA8;
+    background-color: #f6f6f6;
 }
 #mediate{
     margin-left: 30px;
@@ -23,35 +23,42 @@ html{
     justify-content: flex-start;
     align-items: center;
 }
-.choice{
+.nav_item{
     display:inline-block;
     font-size: 26px;
-    color: white;
+    color: #2b2b2b;
+    margin: 48px;
+}
+.choice{
+    display:inline-block;
+    font-size: 24px;
+    color: black;
+    font-weight:bold;
     margin: auto;
 }
 a{
-    color: white;
+    color: #2b2b2b;
+    font-weight:bold;
+    font-weight: 500;
     text-decoration: none;
 }
-#task_bar{
-    height: 48px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-#mediate_2{
-    height: inherit;
-    width:800px;
-    background-color: #0BB5FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #title{
+    background-image: linear-gradient(to right top, #4876FF,#0BB5FF, #f6f6f6, #ffffff);
+    height:200px;
+    margin-top: 0px;
+    position: relative;
+    margin-bottom: 40px;
+}
+#main_title{
+    position: absolute;
+    font-size: 40px;
+    left: 60px;
+    top: 20px;
+    text-decoration: none;
+}
+h1{
     text-align: center;
-    color: #5D8AA8;
+    color: #2b2b2b;
     text-decoration-line: underline ;
 }
 .nav_item{
@@ -69,14 +76,13 @@ a{
 }
 .days{
     font-size: 30px;
-    border: 2px solid #5D8AA8;
-    border-radius: 30px;
-    background-color: #4876FF;
+    background-image: linear-gradient(to right,#4876FF, #0BB5FF);
     margin: auto;
     color: white;
     padding: 8px;
 }
 .days:hover{
+    background-image: none;
     background-color: #0BB5FF;
 }
 #content{
@@ -86,14 +92,13 @@ a{
 .day{
     width: 1300px;
     height: 400px;
-    background-color: #5D8AA8;
+    background-image: linear-gradient(to right,#4876FF, #0BB5FF);
     margin-bottom: 25px;
     margin-top: 25px;
     margin-left: 118px;
     margin-right: 118px;
     display: flex;
     flex-flow: column;
-
 }
 .morning_session{
     display: flex;
@@ -156,7 +161,48 @@ a{
     justify-content: center;
     align-items: center;
 }
-
+#schedule{
+    position: relative;
+}
+#drop_menu{
+    position: absolute;
+    top: 50px;
+    display: none;
+    z-index: 1;
+}
+#drop_content{
+    position: relative;
+    background-color: #f6f6f6;
+    width: 160px;
+    height:130px;
+}
+#Schedule:hover  #drop_menu{
+    display: block;
+}
+#Schedule:hover{
+    background-color: #CCCCCC;
+}
+.color_change:hover{
+    background-color: #CCCCCC;
+}
+#drop_content_schedule{
+    position: absolute;
+    top:10px;
+    left: 30px;
+    background-color: #f6f6f6;
+}
+#drop_content_homework{
+    position: absolute;
+    top:50px;
+    left:30px;
+    background-color: #f6f6f6;
+}
+#drop_content_revision{
+    position: absolute;
+    top:90px;
+    left: 30px;
+    background-color: #f6f6f6;
+}
 
 
 
