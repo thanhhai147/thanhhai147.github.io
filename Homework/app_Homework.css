@@ -113,12 +113,13 @@ h1{
     background-color: #0BB5FF;
 }
 #content{
-    margin-top: 40px;
+    margin-top: 15px;
     display: flex;
     flex-flow: column;    
 }
 .small_task{
     background-image: linear-gradient(to right, #0BB5FF, #4876FF);
+    margin-top: 15px;
     height:70px;
     width: 500px;
     margin-left: auto;
@@ -132,25 +133,31 @@ h1{
     padding-bottom: 0;
     margin-bottom: 10px;
 }
+.small_task:hover{
+    box-shadow: 10px 10px #CCCCCC;
+    background-image: none;
+    background-color: #0BB5FF;
+}
 .name{
     display: flex;
     font-size: 24px;
-    color: #ffffff;
+    color: #2b2b2b;
 }
 .time{
     display: flex;
     font-size: 24px;
-    color: #ffffff;
+    color: #2b2b2b;
 }
 .name_part{
     margin-left: 8px;
-    color: #ffffff;
+    color: #2b2b2b;
 }
 .time_part{
     margin-left: 8px;
-    color: #ffffff; 
+    color: #2b2b2b; 
 }
 #start{
+    margin-top: 15px;
     height: 30px;
     width: 250px;
     margin-left: auto;
@@ -256,3 +263,9 @@ h1{
     top: 180px;
     left: 120px;
 }
+#finish:hover{
+    background-image: none;
+    background-color: #0BB5FF;
+    cursor: context-menu;
+}
+

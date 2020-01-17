@@ -47,53 +47,6 @@ a{
     color: #2b2b2b;
     text-decoration: none;
 }
-#search{
-    height: 35px;
-    width: 90%;
-    font-size: 18px;
-    border: 2px solid #0BB5FF;
-    margin: 20px;
-    background-color: #f6f6f6;
-}
-#task_bar{
-    background-color: #f6f6f6;
-}
-#task_show{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:20px;    
-    background-image: linear-gradient(to right, #0BB5FF, #4876FF);
-    padding: 8px;
-}
-#exercise{
-    display: flex;
-    flex-flow: column;
-}
-.part{
-    height: 60px;
-    width: 80%;
-    background-image: linear-gradient(to right, #0BB5FF, #4876FF);
-    color: black;
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-}
-.part:hover{
-    cursor: context-menu;
-    box-shadow: 10px 10px #CCCCCC;
-    background-image: none;
-    background-color: #0BB5FF;
-}
-.name{
-    color: black;
-    margin-left: 20px;
-    font-size: 24px;
-}
 #schedule{
     position: relative;
 }
@@ -136,4 +89,3 @@ a{
     left: 30px;
     background-color: #f6f6f6;
 }
-

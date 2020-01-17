@@ -84,6 +84,7 @@ h1{
 .days:hover{
     background-image: none;
     background-color: #0BB5FF;
+    box-shadow: 10px 10px #CCCCCC;
 }
 #content{
     display: flex;

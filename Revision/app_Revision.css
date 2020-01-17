@@ -117,8 +117,7 @@ h1{
 }
 .sub_board{
     margin: 20px;
-    margin-top:10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-image: linear-gradient(to right,#4876FF, #0BB5FF);
     border-radius: 5px;
 }
@@ -184,4 +183,8 @@ a{
     top:90px;
     left: 30px;
     background-color: #f6f6f6;
+}
+.sub_board:hover{
+    cursor: context-menu;
+    box-shadow: 10px 10px #CCCCCC;
 }
