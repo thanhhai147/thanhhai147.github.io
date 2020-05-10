@@ -33,8 +33,7 @@ document.getElementById("form").addEventListener("submit", (x) => {
             a[i] = {
                 time: `${weekday[day]}`,
                 classname: `index_${i}`
-            };
-            day++; 
+            }; 
             date++;
             if(day>=7){
                 day = day - 7;
