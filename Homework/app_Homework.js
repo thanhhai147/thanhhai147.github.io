@@ -115,7 +115,8 @@ function countdown(){
     }
     else{
         var get = document.getElementById("count");
-    var mediate = each_num % 60;
+    var m = each_num % 60;
+    var mediate = m.toFixed(0);
     var hour  = (each_num-mediate) / 60;
     var second = 0;
     get.innerHTML = `${hour}:${mediate}:${second}`;

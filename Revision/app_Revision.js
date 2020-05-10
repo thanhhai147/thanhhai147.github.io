@@ -27,6 +27,7 @@ document.getElementById("form").addEventListener("submit", (x) => {
         number_day = document.getElementById("day_num").value;
         number_subject = document.getElementById("sub_num").value;
         var b = number_day - 1;
+        console.log(b,number_day);
         var a = new Array(b);
         for(var i=0; i<number_day; i++){
             a[i] = {
@@ -56,6 +57,7 @@ document.getElementById("form").addEventListener("submit", (x) => {
             if(month==13){
                 year++;
             }
+            day++;
         }
         var put = document.getElementById("content");
         if(put.childElementCount==0){
