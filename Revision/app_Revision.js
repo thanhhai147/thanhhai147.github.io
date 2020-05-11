@@ -17,25 +17,23 @@ document.getElementById("form").addEventListener("submit", (x) => {
         weekday[3] = "Wednesday";
         weekday[4] = "Thursday";
         weekday[5] = "Friday";
-        weekday[6] = "Sunday";
+        weekday[6] = "Saturday";
         var day = d.getDay();
         var date = d.getDate();
         var month = d.getMonth();
-        var year = d.getFullYear();
-    
+        var year= d.getFullYear();
 
         number_day = document.getElementById("day_num").value;
         number_subject = document.getElementById("sub_num").value;
-        var b = number_day - 1;
-        console.log(b,number_day);
+        var b = number_day;
         var a = new Array(b);
         for(var i=0; i<number_day; i++){
             a[i] = {
-                time: `${weekday[day]}`,
+                time: `${weekday[day]} - ${date}/${month}/${year}`,
                 classname: `index_${i}`
-            }; 
-            date++;
-            if(day>=7){
+            }
+            console.log(day);
+            if(day>=6){
                 day = day - 7;
             } 
             if(month==2){
@@ -56,6 +54,7 @@ document.getElementById("form").addEventListener("submit", (x) => {
             if(month==13){
                 year++;
             }
+            date++;
             day++;
         }
         var put = document.getElementById("content");
